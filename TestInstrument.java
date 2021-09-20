@@ -15,4 +15,22 @@ public class TestInstrument implements Instrument {
         }
     }
 
+    @Override
+    public void pluck(char key){
+        double freq = 440.0 * Math.pow(2.0, (key % 37 - 24) / 12)
+        int size = (int)(44100.0 / freq);
+        for (int gs = 0; gs < 37; gs++) {
+
+        }
+    }
+
+    public void tick() {
+
+    }
+
+    public double superposition() {
+        return 0;
+        
+    }
+
 }
