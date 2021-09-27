@@ -44,8 +44,13 @@ public class TestInstrument implements Instrument {
 
     @Override
     public double superposition() {
-        // TODO Auto-generated method stub
-        return 0;
+        double count = 0;
+        for (int i = 0; i < strings.size(); i++) {
+            LinkedList<Double> buffer = strings.get(i);
+
+            count += buffer.getFirst();
+        }
+        return count;
     }
 
 }
